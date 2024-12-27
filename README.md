@@ -1,4 +1,4 @@
-# <img src="https://github.com/zhivem/Minibin-fork-zhivem/blob/main/MinibinFork.ico" width="4%" height="4%"> RecycleBinManager by [Zhivem]
+# <img src="https://raw.githubusercontent.com/zhivem/RecycleBinManagerPY/refs/heads/main/RecycleBinManager.ico" width="4%" height="4%"> RecycleBinManager by [Zhivem]
 
 ## Скриншоты 
 ![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
