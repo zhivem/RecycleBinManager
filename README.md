@@ -1,7 +1,7 @@
 # <img src="https://raw.githubusercontent.com/zhivem/RecycleBinManagerPY/refs/heads/main/RecycleBinManager.ico" width="4%" height="4%"> RecycleBinManager by [Zhivem]
 
 ## Скриншоты 
-![image](https://github.com/user-attachments/assets/6b77ba08-8d8f-43c4-9224-69c154982b44)
+![image](https://github.com/user-attachments/assets/b71883eb-768b-4d0a-aa2f-df2fb807be10)
 ![image](https://github.com/user-attachments/assets/c1aad96a-44d4-4040-85ad-ea054514e98b)
 ![image](https://github.com/user-attachments/assets/27b121cc-eddd-40fc-bbaf-38340ffc7fce)
 
