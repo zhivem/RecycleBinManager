@@ -43,7 +43,7 @@ RecycleBinManager — это Windows-приложение, написанное 
     ```
 3. Склонируйте репозиторий:
     ```bash
-    git clone https://github.com/ваш-логин/RecycleBinManager.git
+    git https://github.com/zhivem/RecycleBinManagerPY.git
     cd RecycleBinManager
     ```
 4. Запустите приложение:
