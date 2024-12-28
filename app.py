@@ -320,6 +320,6 @@ if __name__ == "__main__":
     # Запускаем таймер для периодического обновления иконки и тултипа
     timer = QTimer()
     timer.timeout.connect(periodic_update)
-    timer.start(3000)
+    timer.start(1000)
 
     sys.exit(app.exec())
