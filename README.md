@@ -1,9 +1,9 @@
 # <img src="https://raw.githubusercontent.com/zhivem/RecycleBinManagerPY/refs/heads/main/RecycleBinManager.ico" width="4%" height="4%"> RecycleBinManager by [Zhivem]
 
 ## Скриншоты 
-![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
-![image](https://github.com/user-attachments/assets/dec1e275-4f8b-4ef7-b435-18a1c5ad05c3)
-![image](https://github.com/user-attachments/assets/8068a0fd-b223-47fc-ad3f-2fd31d76cb24)
+![image](https://github.com/user-attachments/assets/6b77ba08-8d8f-43c4-9224-69c154982b44)
+![image](https://github.com/user-attachments/assets/c1aad96a-44d4-4040-85ad-ea054514e98b)
+![image](https://github.com/user-attachments/assets/27b121cc-eddd-40fc-bbaf-38340ffc7fce)
 
 > [!NOTE]
 > Утилиту RecycleBinManager, написанную на языке `C#`, можно посмотреть здесь: [RecycleBinManager на C#](https://github.com/zhivem/MinibinForkC). Эта версия утилиты имеет меньший размер и позволяет установить дополнительные иконки.
