@@ -2,7 +2,7 @@
 
 ## Скриншоты 
 ![image](https://github.com/user-attachments/assets/b71883eb-768b-4d0a-aa2f-df2fb807be10)
-![image](https://github.com/user-attachments/assets/c1aad96a-44d4-4040-85ad-ea054514e98b)
+![image](https://github.com/user-attachments/assets/c6c78e9e-d9f8-4d33-b134-b548ef197c5a)
 ![image](https://github.com/user-attachments/assets/27b121cc-eddd-40fc-bbaf-38340ffc7fce)
 
 > [!NOTE]
