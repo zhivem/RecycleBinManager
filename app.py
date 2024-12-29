@@ -270,6 +270,46 @@ def on_tray_icon_activated(reason):
     if reason == QSystemTrayIcon.ActivationReason.DoubleClick:
         open_recycle_bin()
 
+def initialize_update_timer_menu():
+    """
+    Инициализирует меню выбора таймера обновления корзины.
+    """
+    update_timer_menu = QMenu("Таймер обновления корзины", tray_menu)
+    update_timer_group = QActionGroup(update_timer_menu)
+    update_timer_group.setExclusive(True)
+
+    # Определяем возможные интервалы в секундах
+    intervals = [1, 3, 5]
+
+    # Получаем текущий интервал из настроек, по умолчанию 1 секунда
+    current_interval = settings.value("update_interval", 1, type=int)
+    if current_interval not in intervals:
+        current_interval = 1
+        settings.setValue("update_interval", current_interval)
+
+    for interval in intervals:
+        action = QAction(f"{interval} сек", update_timer_group, checkable=True)
+        if interval == current_interval:
+            action.setChecked(True)
+        # Подключаем сигнал
+        action.triggered.connect(lambda checked, sec=interval: set_update_interval(sec))
+        update_timer_group.addAction(action)
+        update_timer_menu.addAction(action)
+
+    # Добавляем меню в основное меню трея
+    tray_menu.addMenu(update_timer_menu)
+
+# Функция для установки интервала обновления
+def set_update_interval(seconds):
+    """
+    Устанавливает интервал обновления таймера и сохраняет его в настройках.
+    """
+    global timer
+    interval_ms = seconds * 1000
+    timer.setInterval(interval_ms)
+    settings.setValue("update_interval", seconds)
+    show_notification("Таймер обновления", f"Интервал обновления установлен на {seconds} сек.", is_main=False)
+
 if __name__ == "__main__":
     print(f"Текущая рабочая директория: {Path.cwd()}")
 
@@ -307,6 +347,9 @@ if __name__ == "__main__":
     initialize_show_recycle_bin_menu()
     initialize_icon_set_menu()
 
+    # Добавляем меню для таймера обновления корзины
+    initialize_update_timer_menu()
+
     # Добавляем разделитель перед выходом
     tray_menu.addSeparator()
     tray_menu.addAction(exit_action)
@@ -317,9 +360,10 @@ if __name__ == "__main__":
 
     tray_icon.activated.connect(on_tray_icon_activated)
 
-    # Запускаем таймер для периодического обновления иконки и тултипа
+    # Получаем интервал обновления из настроек, по умолчанию 1 секунда
+    update_interval = settings.value("update_interval", 1, type=int)
     timer = QTimer()
     timer.timeout.connect(periodic_update)
-    timer.start(1000)
+    timer.start(update_interval * 1000)
 
     sys.exit(app.exec())
